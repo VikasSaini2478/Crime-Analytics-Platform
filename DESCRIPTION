@@ -1,0 +1,29 @@
+Package: CrimeAnalyticsPlatform
+Title: India Crime Analytics and Prediction Dashboard
+Version: 2.1.0
+Date: 2026-06-07
+Description: Enterprise-grade R Shiny dashboard for India crime intelligence.
+    Covers 29 major cities (2020-2024). Provides data engineering, feature
+    engineering (39 features), multi-model ML prediction (LR, RF, XGBoost-proxy),
+    time-series forecasting ETS+ARIMA (2025-2030), SHAP-based XAI, 15
+    statistical hypothesis tests (T/Chi-square/ANOVA), and an 11-section
+    interactive dark-theme dashboard with automated Excel and HTML reporting.
+    Fixed for Windows/Linux/Mac: all ASCII source code, UTF-8 safe.
+License: MIT
+Encoding: UTF-8
+Depends:
+    R (>= 4.2.0)
+Imports:
+    shiny (>= 1.7.0),
+    shinycssloaders (>= 1.0.0),
+    plotly (>= 4.10.0),
+    DT (>= 0.28),
+    dplyr (>= 1.1.0),
+    tidyr (>= 1.3.0),
+    zoo (>= 1.8.0),
+    randomForest (>= 4.7.0),
+    forecast (>= 8.21.0),
+    openxlsx (>= 4.2.5),
+    logger (>= 0.2.2)
+Suggests:
+    shinyjs

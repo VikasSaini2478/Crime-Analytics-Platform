@@ -1,0 +1,136 @@
+/* ============================================================
+   theme.css  -  Crime Analytics Platform v2.1
+   Supplemental styles (loaded via www/)
+   ============================================================ */
+
+/* -- Scroll: sidebar sticky, main scrolls naturally ---------
+   body is NOT overflow:hidden so Shiny can measure plot sizes */
+body, html {
+  margin: 0;
+  padding: 0;
+}
+.wrap {
+  display: flex;
+  min-height: 100vh;
+  align-items: flex-start;
+}
+.sidebar {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+  flex-shrink: 0;
+}
+.main {
+  flex: 1;
+  min-height: 100vh;
+  /* No overflow:hidden - let Shiny/plotly measure heights correctly */
+}
+
+/* -- Nav active state transition --------------------------- */
+.nav-btn {
+  transition: background 0.15s ease, color 0.15s ease !important;
+}
+.nav-btn.active {
+  background: rgba(88,166,255,0.13) !important;
+  color: #58a6ff !important;
+  font-weight: 600 !important;
+  border-left: 3px solid #58a6ff !important;
+  padding-left: 7px !important;
+}
+.nav-btn:not(.active) {
+  border-left: 3px solid transparent !important;
+}
+
+/* -- Chart card: consistent spacing ----------------------- */
+.cc + .cc {
+  margin-top: 16px;
+}
+.chart-grid > .cc {
+  margin-bottom: 0;
+}
+
+/* -- Plotly: ensure plots fill their containers ----------- */
+.plotly-graph-div {
+  width: 100% !important;
+}
+.js-plotly-plot {
+  width: 100% !important;
+}
+
+/* -- Plotly modebar --------------------------------------- */
+.modebar {
+  background: rgba(22,27,34,0.9) !important;
+  border-radius: 5px !important;
+}
+.modebar-btn path { fill: #8b949e !important; }
+.modebar-btn:hover path { fill: #58a6ff !important; }
+
+/* -- Spinner override ------------------------------------- */
+.sk-circle .sk-child::before     { background-color: #58a6ff !important; }
+.sk-folding-cube .sk-cube::before { background-color: #58a6ff !important; }
+
+/* -- File input button ------------------------------------ */
+.input-group-btn .btn-default {
+  background: rgba(88,166,255,0.12) !important;
+  border: 1px solid #58a6ff !important;
+  color: #58a6ff !important;
+  border-radius: 6px 0 0 6px !important;
+  font-size: 12px !important;
+}
+
+/* -- Tab spacing ------------------------------------------ */
+.tab-content > .tab-pane { padding-top: 16px; }
+
+/* -- DataTable row hover ---------------------------------- */
+table.dataTable tbody tr {
+  transition: background 0.12s ease !important;
+}
+
+/* -- Scrollable DT wrapper -------------------------------- */
+.dt-scroll {
+  overflow-y: auto;
+}
+
+/* -- KPI + page entrance animation ----------------------- */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.ph {
+  animation: fadeInUp 0.28s ease forwards;
+}
+
+/* -- Live status dot -------------------------------------- */
+@keyframes statusPulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(63,185,80,0.6); }
+  50%       { box-shadow: 0 0 0 6px rgba(63,185,80,0); }
+}
+.dot-green {
+  animation: statusPulse 2s ease-in-out infinite !important;
+}
+
+/* -- Forecast page: prevent empty white space ------------- */
+.forecast-dropdown {
+  margin-bottom: 16px;
+}
+
+/* -- Print ------------------------------------------------ */
+@media print {
+  .sidebar { display: none !important; }
+  .main    { padding: 0 !important; }
+  .cc      { border: 1px solid #ccc !important; background: #fff !important; }
+  .kpi-card { border: 1px solid #ccc !important; background: #f9f9f9 !important; }
+  .kpi-val, .kpi-lbl, .cc-title { color: #000 !important; }
+}
+
+/* -- Responsive ------------------------------------------- */
+@media (max-width: 1100px) {
+  .kpi-row { grid-template-columns: 1fr 1fr !important; }
+  .g3, .g2, .gw { grid-template-columns: 1fr !important; }
+}
+@media (max-width: 700px) {
+  .kpi-row  { grid-template-columns: 1fr !important; }
+  .sidebar  { display: none !important; }
+  .main     { padding: 10px !important; }
+}
