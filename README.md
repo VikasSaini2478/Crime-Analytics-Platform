@@ -93,12 +93,3 @@ crime_analytics/
 - Statistical tests: 15 (7 significant at p < 0.05)
 
 ---
-
-## Compatibility
-
-- Windows 10/11 + R 4.2+
-- Ubuntu 20.04/22.04/24.04 + R 4.2+
-- macOS 12+ + R 4.2+
-- Docker (see DEPLOYMENT.md)
-
-v2.1 - June 2026 - All ASCII source, UTF-8 safe
