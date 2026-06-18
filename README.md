@@ -1,35 +1,30 @@
-# India Crime Analytics Platform v2.1
+# Crime Analysis and Forecasting Dashboard
 
-Enterprise-grade R Shiny dashboard for crime intelligence.
-Covers 29 Indian cities, 2020-2024 data, with ML forecasting to 2030.
+An interactive R Shiny dashboard for analyzing, visualizing, and forecasting crime trends across India using statistical methods and machine learning.
 
-## Quick Start (3 steps)
+## Overview
 
-### Step 1 - Install R
-Download from https://cran.r-project.org/
+The Crime Analysis and Forecasting Dashboard helps users explore historical crime data, identify patterns, generate insights, and predict future crime trends.
 
-### Step 2 - Install packages
-Open R or RStudio and run:
-```r
-source("INSTALL_PACKAGES.R")
-```
+The application provides:
 
-### Step 3 - Launch app
-```r
-shiny::runApp(".")
-```
-App opens at http://localhost:3838
+* Interactive visualizations of crime statistics
+* Crime trend analysis across states and years
+* Crime type classification and comparison
+* Forecasting of future crime rates
+* Statistical analysis and hypothesis testing
+* Automated report generation
 
----
+## Features
 
-## Windows Users
-
-If you see encoding errors, make sure to:
-1. Open R/RStudio with Administrator rights (first time only)
-2. Run `source("INSTALL_PACKAGES.R")` before launching
-3. Use `shiny::runApp(".")` NOT `source("app.R")` directly from RStudio
-
----
+* Interactive dashboard built with R Shiny
+* Data preprocessing and feature engineering pipelines
+* Exploratory data analysis (EDA)
+* Crime trend visualization
+* Predictive modeling and forecasting
+* Model explainability and interpretation
+* Statistical testing and reporting
+* Exportable reports in multiple formats
 
 ## Project Structure
 
@@ -65,6 +60,111 @@ crime_analytics/
 
 ---
 
+## Technologies Used
+
+* R
+* R Shiny
+* ggplot2
+* dplyr
+* tidyr
+* plotly
+* caret
+* forecast
+* randomForest
+* xgboost
+* DT
+
+## Installation
+
+### Clone the Repository
+
+```bash
+git clone https://github.com/YOUR_USERNAME/crime-analysis-dashboard.git
+cd crime-analysis-dashboard
+```
+
+### Install Dependencies
+
+Open the project in RStudio and run:
+
+```r
+source("INSTALL_PACKAGES.R")
+```
+
+## Running the Application
+
+Launch the dashboard using:
+
+```r
+shiny::runApp()
+```
+
+Or open `app.R` in RStudio and click **Run App**.
+
+## Dataset
+
+The project uses historical crime data collected from publicly available sources.
+
+Example attributes include:
+
+* State
+* Year
+* Crime Category
+* Total Crimes
+* Crime Rate
+* Population
+
+## Machine Learning Workflow
+
+1. Data Collection
+2. Data Cleaning and Preprocessing
+3. Feature Engineering
+4. Exploratory Data Analysis
+5. Model Training
+6. Model Evaluation
+7. Forecast Generation
+8. Report Creation
+
+## Results
+
+The dashboard enables users to:
+
+* Identify crime hotspots
+* Analyze year-over-year trends
+* Compare crime categories
+* Forecast future crime patterns
+* Generate actionable insights
+
+## Screenshots
+
+## Dashboard <img width="1918" height="1030" alt="Screenshot 2026-06-13 223052" src="https://github.com/user-attachments/assets/2535af7d-9aff-409a-b982-a069ae0a5399" />
+
+## Crime Map<img width="1917" height="1020" alt="Screenshot 2026-06-13 223122" src="https://github.com/user-attachments/assets/e0dafa2d-1e8a-47a3-979a-aeead5a14da6" />
+
+## Forecast Center <img width="1912" height="1020" alt="Screenshot 2026-06-13 223207" src="https://github.com/user-attachments/assets/4fafb87c-a596-4c0a-8a25-48c1631b0751" />
+
+## Model Evaluation<img width="1817" height="1028" alt="Screenshot 2026-06-13 223228" src="https://github.com/user-attachments/assets/c883a166-61dd-4597-92da-f9b4f3ae7d89" />
+
+## Statistical Test<img width="1918" height="1022" alt="Screenshot 2026-06-13 223307" src="https://github.com/user-attachments/assets/c5a3d1af-3947-4593-a277-e78cecc5da61" />
+
+## Future Enhancements
+
+* Real-time data integration
+* Geospatial crime mapping
+* Deep learning models
+* User authentication
+* API integration
+* Automated deployment
+
+## Contributing
+
+Contributions are welcome.
+
+1. Fork the repository
+2. Create a feature branch
+3. Commit your changes
+4. Open a pull request
+
 ## Dashboard Pages (11 total)
 
 | Page | Description |
@@ -93,3 +193,13 @@ crime_analytics/
 - Statistical tests: 15 (7 significant at p < 0.05)
 
 ---
+
+## License
+
+This project is licensed under the MIT License.
+
+## Author
+
+Vikas Saini
+
+GitHub: https://github.com/VikasSaini2478
